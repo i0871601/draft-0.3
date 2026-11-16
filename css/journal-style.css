@@ -488,7 +488,7 @@
 
 
 #frame-lesson {
-  width: 50%;
+  width: 0%;
   height: 100%;
   position: absolute;
   right: 0;
@@ -496,6 +496,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#radio-lesson-frame:checked ~ #journal-frame #frame-lesson {
+  width: 50%;
 }
 
 /*#content-select::-webkit-scrollbar{
