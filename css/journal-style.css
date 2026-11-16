@@ -486,6 +486,18 @@
   overflow: hidden;
 }
 
+
+#frame-lesson {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*#content-select::-webkit-scrollbar{
   width: 0.5rem;
   background-color: transparent;
