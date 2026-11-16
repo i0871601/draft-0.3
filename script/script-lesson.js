@@ -13,5 +13,5 @@ function listLesson(elements, subject, teacher, classInfo) {
 function lesson(role, elements, mapLesson, subject, teacher, classInfo) {
     console.log(mapLesson, subject, teacher, classInfo);
 
-    if(mapLesson.length >= 0 and role === 'teacher') listLesson(role, elements, subject, teacher, classInfo);
+    if(mapLesson.length >= 0 && role === 'teacher') listLesson(elements, subject, teacher, classInfo);
 }
