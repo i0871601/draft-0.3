@@ -8,7 +8,7 @@ function listLesson(role, elements, subject, teacher, classInfo) {
             </div>
         `;
 
-        elements.contentLesson.insertAdjacentHTML('beforeend', buttonHTMLHTML);
+        elements.contentLesson.insertAdjacentHTML('beforeend', buttonHTML);
     }
 }
 
