@@ -1,6 +1,4 @@
-function listLesson(elements, subject, teacher, classInfo) {
-    elements.contentLesson.innerHTML = '';
-
+function addLesson(elements, subject, teacher, classInfo) {
     const buttonHTML = `
         <input type="checkbox" id="button-add" class="input">
         <form id="add-lesson-form">
@@ -18,6 +16,28 @@ function listLesson(elements, subject, teacher, classInfo) {
 
 function lesson(role, elements, mapLesson, subject, teacher, classInfo) {
     console.log(mapLesson, subject, teacher, classInfo);
+    elements.contentLesson.innerHTML = '';
+    //отримати з останього запису lessonNumber
+    mapLesson.forEach(item => {
+        let elHTML = "";
+        if (item.lessonType === "звичайний") {
+            elHTML = `
+            <div class="lesson" data-home-work="${item.homeWork}">
+                <p>${item.lessonNumber}<p>
+                <p>${item.Topic}</p>
+            </div>
+            `;
+        }
+        else {
+            elHTML = `
+            <div class="topic">
+                <span><span>
+                <p>${item.lessonType}></p>
+            </div>
+            `;
+        }
+        elements.contentLesson.insertAdjacentHTML('beforeend', elHTML);
+    });
 
-    if(mapLesson.length >= 0 && role === 'teacher') listLesson(elements, subject, teacher, classInfo);
+    if(mapLesson.length >= 0 && role === 'teacher') addLesson(elements, subject, teacher, classInfo);
 }
