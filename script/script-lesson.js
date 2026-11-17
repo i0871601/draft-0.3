@@ -26,6 +26,11 @@ function lesson(role, elements, mapLesson, subject, teacher, classInfo) {
                 <span></span>
                 <p>${item.lessonNumber}</p>
                 <p>${item.Topic}</p>
+
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             `;
         }

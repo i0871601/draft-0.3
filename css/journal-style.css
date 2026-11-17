@@ -350,7 +350,7 @@
   text-overflow: ellipsis;
 }
 
-#arrow {
+.arrow {
   height: 1rem;
   aspect-ratio: 1 / 1;
   display: flex;
@@ -358,7 +358,7 @@
   position: relative;
 }
 
-#arrow span {
+.arrow span {
   display: block;
   width: 0.63rem;
   height: 0.15rem;
@@ -367,10 +367,10 @@
   transition: transform 0.5s ease-in-out;
 }
 
-#arrow span:nth-of-type(1)  {
+.arrow span:nth-of-type(1)  {
   transform: rotate(45deg);
 }
-#arrow span:nth-of-type(2) {
+.arrow span:nth-of-type(2) {
   transform: rotate(-45deg);
   position: absolute;
   right: 0;
@@ -453,10 +453,10 @@
   max-height: 17rem;
 }
 
-#select-subject:checked ~ #select-navg #button-select-subject #arrow span:nth-of-type(1) {
+#select-subject:checked ~ #select-navg #button-select-subject .arrow span:nth-of-type(1) {
   transform: rotate(-45deg);
 }
-#select-subject:checked ~ #select-navg #button-select-subject #arrow span:nth-of-type(2) {
+#select-subject:checked ~ #select-navg #button-select-subject .arrow span:nth-of-type(2) {
   transform: rotate(45deg);
 }
 
@@ -576,7 +576,20 @@
   height: 3rem;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 0 1rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.1rem var(--shadow);
+}
+
+.lesson span {
+  height: 100%;
+  width: 0.5rem;
+  background-color: var(--shadow);
+  opacity: 0.5;
+  margin: 0 1rem 0 0;
 }
 /*#content-select::-webkit-scrollbar{
   width: 0.5rem;
