@@ -45,7 +45,7 @@ function init() {
     }
     //Відслідковуємо стан 
     if (elements.selectSubjectClass) {
-        elements.selectSubjectClass.addEventListener('click' (e) => {
+        elements.selectSubjectClass.addEventListener('click', (e) => {
             if (elements.selectSubjectClass.checked) {
                 elements.radioJournalFrame.checked = true;
             }
