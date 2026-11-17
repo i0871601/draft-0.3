@@ -44,7 +44,7 @@ function init() {
             }
         });
     }
-    //Відслідковуємо стан 
+    //Відслідковуємо стан чи відкрите випадаюче класів і предметів чи вікно списки. Щоб не перекривали один одного
     if (elements.selectSubjectClass || elements.radioLessonFrame) {
         elements.selectSubjectClass.addEventListener('change', (e) => {
             if (elements.selectSubjectClass.checked) {
@@ -54,6 +54,25 @@ function init() {
         elements.radioLessonFrame.addEventListener('change', (e) => {
             if (elements.radioLessonFrame.checked) {
                 elements.selectSubjectClass.checked = false;
+            }
+        });
+    }
+    //Відстежування кліку на кнопку 
+    if (elements.contentDivLesson) {
+        let buttonOnAddForm_buttonFetchForm = 0;
+        elements.contentDivLesson.addEventListener('change', (e) => {
+            if (e.target === elements.contentDivLesson.querySelector('#button-add')) {
+                const buttonLabelOn = elements.contentDivLesson.querySelector('#button-add-lesson');
+                if (buttonOnAddForm_buttonFetchForm === 0) {
+                    buttonOnAddForm_buttonFetchForm = 1;
+                }
+                if (buttonOnAddForm_buttonFetchForm === 1) {
+                    buttonOnAddForm_buttonFetchForm = 0;
+                    //відправка форми
+                }
+            }
+            if (e.target === elements.contentDivLesson.querySelector('#button-add') && !elements.contentDivLesson.querySelector('#button-add').checked) {
+                //то форму очищуєм
             }
         });
     }

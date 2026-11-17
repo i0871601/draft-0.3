@@ -2,9 +2,15 @@ function listLesson(elements, subject, teacher, classInfo) {
     elements.contentLesson.innerHTML = '';
 
     const buttonHTML = `
-        <div id="button-add-lesson">
-            <p id="tetx-button-add-lesson">Додати урок</p>
-        </div>
+        <input type="checkbox" id="button-add" class="input">
+        <form id="add-lesson-form">
+            <label for="button-add" id="button-add-form-closed">
+                <span></span>
+                <span></span>
+            </label>
+            
+        </form>
+        <label for="button-add" id="button-add-lesson">Додати урок</label>
     `;
 
     elements.contentLesson.insertAdjacentHTML('beforeend', buttonHTML);
