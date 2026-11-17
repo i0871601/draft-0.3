@@ -776,6 +776,12 @@
   #button-select-subject {
     min-width: 50vmin;
   }
+
+  #frame-lesson {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media (max-height: 500px) {
