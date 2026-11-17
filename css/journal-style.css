@@ -542,7 +542,7 @@
 #add-lesson-form {
   max-height: 0;
   width: 100%;
-  height: max-content;
+  height: 100%;
   position: relative;
   overflow: hidden;
   opacity: 0;
