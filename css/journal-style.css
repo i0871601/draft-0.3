@@ -518,7 +518,24 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  overflow-y: auto;
+  overflow-y: scroll;
+}
+
+#shadow-lesson-list::-webkit-scrollbar{
+  margin: 1rem 0;
+  width: 0.5rem;
+  background-color: transparent;
+}
+
+#shadow-lesson-list::-webkit-scrollbar-thumb{
+  background-color: var(--shadow);
+  border-radius: 25px;
+}
+#shadow-lesson-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+#shadow-lesson-list::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 #lesson-list {
@@ -550,7 +567,7 @@
 #add-lesson-form {
   max-height: 0;
   width: 100%;
-  height: 100%;
+  height: 15rem;
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -559,7 +576,7 @@
   transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 #button-add:checked ~ #add-lesson-form {
-  max-height: 100%;
+  max-height: 15rem;
   opacity: 1;
 }
 
