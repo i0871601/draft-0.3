@@ -524,7 +524,7 @@
   width: 15rem;
   height: 2rem;
   border-radius: 1rem;
-  background-color: var(--shadow);
+  background-color: var(--fon-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -584,7 +584,7 @@
   box-shadow: 0 0 0.1rem var(--shadow);
 }
 
-.lesson span {
+.lesson .marks-border {
   height: 100%;
   width: 0.5rem;
   background-color: var(--shadow);
