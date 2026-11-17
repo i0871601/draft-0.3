@@ -23,6 +23,7 @@ function lesson(role, elements, mapLesson, subject, teacher, classInfo) {
         if (item.lessonType === "звичайний") {
             elHTML = `
             <div class="lesson" data-home-work="${item.homeWork}">
+                <span></span>
                 <p>${item.lessonNumber}</p>
                 <p>${item.Topic}</p>
             </div>

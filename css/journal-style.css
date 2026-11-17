@@ -496,7 +496,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--fon-color-1);
+  background-color: var(--fon-color-2);
   border-radius: 1.5rem;
   opacity: 0;
   visibility: hidden;
@@ -524,7 +524,7 @@
   width: 15rem;
   height: 2rem;
   border-radius: 1rem;
-  background-color: var(--fon-color);
+  background-color: var(--shadow);
   display: flex;
   justify-content: center;
   align-items: center;
