@@ -46,14 +46,13 @@ function init() {
     }
     //Відслідковуємо стан 
     if (elements.selectSubjectClass || elements.radioLessonFrame) {
-        const divNavg = document.getElementById('select-navg');
-        
-        divNavg.addEventListener('change', (e) => {
-            if (e.target === elements.selectSubjectClass) {
+        elements.selectSubjectClass.addEventListener('change', (e) => {
+            if (elements.selectSubjectClass.checked) {
                 elements.radioJournalFrame.checked = true;
             }
-            
-            if (e.target === elements.radioLessonFrame) {
+        });
+        elements.radioLessonFrame.addEventListener('change', (e) => {
+            if (elements.radioJournalFrame.checked) {
                 elements.selectSubjectClass.checked = false;
             }
         });
