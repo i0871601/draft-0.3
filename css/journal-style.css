@@ -537,10 +537,13 @@
   width: 100%;
   height: calc(80dvh - 9rem);
   position: relative;
-  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
 #button-add:checked ~ #add-lesson-form {
   max-height: calc(80dvh - 9rem);
+  opacity: 1;
 }
 
 #button-add-form-closed {
@@ -551,6 +554,7 @@
   align-items: center;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 #button-add-form-closed span {
   display: block;
@@ -558,12 +562,13 @@
   height: 0.2rem;
   background-color: var(--shadow);
   border-radius: 0.2rem;
+  position: absolute;
 }
 #button-add-form-closed span:nth-of-type(1) {
-  
+  transform: rotate(-45deg);
 }
 #button-add-form-closed span:nth-of-type(2) {
-  
+  transform: rotate(45deg);
 }
 
 /*#content-select::-webkit-scrollbar{
