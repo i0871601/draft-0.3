@@ -21,6 +21,7 @@ function init() {
 
         selectSubjectClass: document.getElementById('select-subject'),
         radioJournalFrame: document.getElementById('radio-journal-frame'),
+        radioLessonFrame: document.getElementById('radio-lesson-frame'),
         contentDivLesson: document.getElementById('frame-lesson'),
         contentLesson: document.getElementById('lesson-list')
     };
@@ -44,10 +45,16 @@ function init() {
         });
     }
     //Відслідковуємо стан 
-    if (elements.selectSubjectClass) {
-        elements.selectSubjectClass.addEventListener('click', (e) => {
-            if (elements.selectSubjectClass.checked) {
+    if (elements.selectSubjectClass || elements.radioLessonFrame) {
+        const divNavg = document.getElementById('select-navg');
+        
+        divNavg.addEventListener('click', (e) => {
+            if (e.target === elements.selectSubjectClass && elements.selectSubjectClass.checked) {
                 elements.radioJournalFrame.checked = true;
+            }
+            
+            if (e.target === elements.radioLessonFrame) {
+                elements.selectSubjectClass.checked = false;
             }
         });
     }
