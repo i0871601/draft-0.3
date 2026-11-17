@@ -532,9 +532,40 @@
   cursor: pointer;
 }
 
-#button-add-lesson p {
-  margin: 0;
+#add-lesson-form {
+  max-height: 0;
+  width: 100%;
+  height: calc(80dvh - 9rem);
+  position: relative;
+  transition: max-height 0.5s ease-in-out;
 }
+#button-add:checked ~ #add-lesson-form {
+  max-height: calc(80dvh - 9rem);
+}
+
+#button-add-form-closed {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+#button-add-form-closed span {
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--shadow);
+  border-radius: 0.2rem;
+}
+#button-add-form-closed span:nth-of-type(1) {
+  
+}
+#button-add-form-closed span:nth-of-type(2) {
+  
+}
+
 /*#content-select::-webkit-scrollbar{
   width: 0.5rem;
   background-color: transparent;
