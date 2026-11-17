@@ -491,6 +491,8 @@
   position: absolute;
   right: 0;
   overflow: hidden;
+  max-width: 70dvh;
+  min-width: 50dvh;
   width: 50%;
   height: 100%;
   display: flex;
