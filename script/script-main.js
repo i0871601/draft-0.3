@@ -52,7 +52,7 @@ function init() {
             }
         });
         elements.radioLessonFrame.addEventListener('change', (e) => {
-            if (elements.radioJournalFrame.checked) {
+            if (elements.radioLessonFrame.checked) {
                 elements.selectSubjectClass.checked = false;
             }
         });
