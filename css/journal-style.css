@@ -511,7 +511,7 @@
   transition: opacity 0.5s ease-in-out, visibility 0s;
 }
 
-#lesson-list {
+#shadow-lesson-list {
   width: 100%;
   height: 100%;
   display: flex;
@@ -519,6 +519,14 @@
   align-items: center;
   padding: 1rem;
   overflow-y: auto;
+}
+
+#lesson-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
 #button-add-lesson {
