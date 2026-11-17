@@ -488,27 +488,53 @@
 
 
 #frame-lesson {
-  width: 50%;
-  opacity: 0;
-  height: 100%;
   position: absolute;
   right: 0;
   overflow: hidden;
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--fon-color-1);
   border-radius: 1.5rem;
+  opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease-in-out, visbility 0s 0.5s;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
 }
 
 #radio-lesson-frame:checked ~ #journal-frame #frame-lesson {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s ease-in-out, visbility 0s;
+  pointer-events: auto;
+  transition: opacity 0.5s ease-in-out, visibility 0s;
 }
 
+#lesson-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+#button-add-lesson {
+  width: 15rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: var(--fon-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color-2);
+  cursor: pointer;
+}
+
+#button-add-lesson p {
+  margin: 0;
+}
 /*#content-select::-webkit-scrollbar{
   width: 0.5rem;
   background-color: transparent;

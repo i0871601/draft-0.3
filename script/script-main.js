@@ -19,6 +19,8 @@ function init() {
         textError: document.getElementById('text-error-frame'),
 
 
+        selectSubjectClass: document.getElementById('select-subject'),
+        radioJournalFrame: document.getElementById('radio-journal-frame'),
         contentDivLesson: document.getElementById('frame-lesson'),
         contentLesson: document.getElementById('lesson-list')
     };
@@ -38,6 +40,14 @@ function init() {
                 const isSelectedDayToday = day === today.getDate() && today.getDay() === dayOfWeek;
 
                 if (typeof EventDayInfo === 'function') EventDayInfo(day, dayOfWeek, isSelectedDayToday, elements);
+            }
+        });
+    }
+    //Відслідковуємо стан 
+    if (elements.selectSubjectClass) {
+        elements.selectSubjectClass.addEventListener('click' (e) => {
+            if (elements.selectSubjectClass.checked) {
+                elements.radioJournalFrame.checked = true;
             }
         });
     }
@@ -89,6 +99,7 @@ function init() {
             if (response.students.length === 0 || (userData.role === "student" && response.lessons.length === 0)) {
                 const text = userData.role === 'student' ? 'В журналі немає записів уроків' : 'В журналі відсутні учні';
                 console.log(text);
+                elements.contentLesson.innerHTML = '';
                 elements.textError.textContent = text;
                 elements.checkboxOffOn.checked = false;
                 return;
