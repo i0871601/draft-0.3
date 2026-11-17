@@ -571,6 +571,13 @@
   transform: rotate(45deg);
 }
 
+.lesson {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 /*#content-select::-webkit-scrollbar{
   width: 0.5rem;
   background-color: transparent;
