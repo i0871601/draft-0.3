@@ -48,8 +48,8 @@ function init() {
     if (elements.selectSubjectClass || elements.radioLessonFrame) {
         const divNavg = document.getElementById('select-navg');
         
-        divNavg.addEventListener('click', (e) => {
-            if (e.target === elements.selectSubjectClass && elements.selectSubjectClass.checked) {
+        divNavg.addEventListener('change', (e) => {
+            if (e.target === elements.selectSubjectClass) {
                 elements.radioJournalFrame.checked = true;
             }
             
