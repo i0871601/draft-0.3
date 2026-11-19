@@ -56,88 +56,82 @@ body {
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 0.3rem var(--shadow);
+}
+#main-bar .marks {
+    margin: 1.5rem 0 0 0;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    pointer-events: auto;
+}
     
-    .marks {
-        margin: 1.5rem 0 0 0;
-        position: relative;
-        box-sizing: border-box;
-        cursor: pointer;
-        pointer-events: auto;
-    }
+#time-button {
+    width: 2.2rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0.2rem solid var(--shadow);
+    outline-offset: -0.2rem;
+    transition: transform 0.7s ease-in-out, outline-color 0.7s ease-in-out;
+}
+#time-button span {
+    width: 0.2rem;
+    height: 1.2rem;
+    border-radius: 0.2rem;
+    position: absolute;
+}
+#time-button span::after {
+    content: '';
+    height: 55%;
+    width: 100%;
+    position: absolute;
+    border-radius: 0.2rem;
+    background-color: var(--shadow);
+    transition: background-color 0.7s ease-in-out;
+}
+        
+#minut {
+    transform: rotate(-45deg);
+    display: flex;
+    flex-direction: column-reverse;
+}
+        
+#time-button:hover {
+    outline-color: var(--color-accent);
+}
+#time-button:checked ~ span::after {
+    background-color: var(--color-accent);
+}
+
+#main-button {
+    width: 2.1rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.21rem;
+    transition: transform 0.7s ease-in-out;
+}
+#main-button span {
+    display: block;
+    outline: 0.2rem solid var(--shadow);
+    outline-offset: -0.2rem;
+    border-radius: 0.3rem;
+    transition: outline 0.7s ease-in-out;
+}
+#main-button:hover span{
+    outline: 0.2rem solid var(--color-accent);
+}
     
-    #time-button {
-        width: 2.2rem;
-        aspect-ratio: 1 / 1;
-        border-radius: 5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        outline: 0.2rem solid var(--shadow);
-        outline-offset: -0.2rem;
-        transition: transform 0.7s ease-in-out, outline-color 0.7s ease-in-out;
-        
-        span {
-            width: 0.2rem;
-            height: 1.2rem;
-            border-radius: 0.2rem;
-            position: absolute;
-            
-            &::after {
-                content: '';
-                height: 55%;
-                width: 100%;
-                position: absolute;
-                border-radius: 0.2rem;
-                background-color: var(--shadow);
-                transition: background-color 0.7s ease-in-out;
-            }
-        }
-        
-        #minut {
-            transform: rotate(-45deg);
-            display: flex;
-            flex-direction: column-reverse;
-        }
-        
-        &:hover {
-            outline-color: var(--color-accent);
-            
-            span::after {
-                background-color: var(--color-accent);
-            }
-        }
-    }
-    
-    #main-button {
-        width: 2.1rem;
-        aspect-ratio: 1 / 1;
-        border-radius: 0.3rem;
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 0.21rem;
-        transition: transform 0.7s ease-in-out;
-        
-        span {
-            display: block;
-            outline: 0.2rem solid var(--shadow);
-            outline-offset: -0.2rem;
-            border-radius: 0.3rem;
-            transition: outline 0.7s ease-in-out;
-        }
-        
-        &:hover span{
-            outline: 0.2rem solid var(--color-accent);
-        }
-    }
-    
-    #off-event-day-button {
-        display: none;
-        visibility: hidden;
-        overflow: hidden;
-        pointer-events: none;
-    }
+#off-event-day-button {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 #content {
@@ -163,12 +157,10 @@ footer {
 #time:checked ~ #main-bar #time-button {
     outline-color: var(--color-accent);
     transform: scale(1.05);
-    
-    span::after {
-        background-color: var(--color-accent);
-    }
+} 
+#time:checked ~ #main-bar #time-button span::after {
+    background-color: var(--color-accent);
 }
-
 #time:checked ~ #content #content-time {
     transform: translateY(0);
     pointer-events: auto;
@@ -181,12 +173,10 @@ footer {
 
 #journal:checked ~ #main-bar #main-button {
     transform: scale(1.05);
-    
-    span {
-        outline: 0.21rem solid var(--color-accent);
-    }
 }
-
+#journal:checked ~ #main-bar #main-button span {
+    outline: 0.21rem solid var(--color-accent);
+}
 #journal:checked ~ #content #content-journal {
     transform: translateY(0%);
     pointer-events: auto;
@@ -214,18 +204,18 @@ footer {
         margin: 0 0 0.3rem 0;
         position: relative;
         flex-direction: row;
+    }
+    #main-bar .marks {
+        margin: 0 0 0 1.5rem;
+    }
         
-        .marks {
-            margin: 0 0 0 1.5rem;
-        }
+    #time-button {
+        width: 2.5rem;
+    }
         
-        #time-button {
-            width: 2.5rem;
-        }
-        
-        #main-button {
-            width: 2.3rem;
-        }
+    #main-button {
+        width: 2.3rem;
+    }
 
         /*#off-event-day-button {
             position: absolute;
@@ -258,7 +248,6 @@ footer {
                 transform: rotate(-45deg);
             }
         }*/
-    }
 
     #content {
         grid-column: 1;
