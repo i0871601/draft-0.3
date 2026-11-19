@@ -582,7 +582,7 @@
   max-height: 15rem;
   opacity: 1;
 }
-#button-add:checked {
+#button-add:checked ~ #button-add-lesson{
   max-height: 0;
 }
 
