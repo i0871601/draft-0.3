@@ -550,13 +550,12 @@
 }
 
 #button-add-lesson {
-  width: 15rem;
+  width: 100%;
   min-height: 3rem;
   height: 3rem;
   border-radius: 0.5rem;
   background-color: transparent;
   box-shadow: 0 0 0.15rem var(--shadow);
-  margin: 1rem 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -582,6 +581,9 @@
 #button-add:checked ~ #add-lesson-form {
   max-height: 15rem;
   opacity: 1;
+}
+#button-add:checked {
+  max-height: 0;
 }
 
 #button-add-form-closed {
